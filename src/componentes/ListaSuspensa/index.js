@@ -1,20 +1,27 @@
 import './ListaSuspensa.css'
+import { v4 as uuidv4 } from 'uuid';
 
-const ListaSuspensa = (props) =>{
+const ListaSuspensa = (props) => {
+    const handleSelect = (event) => {
+        const id = event.target.value;
+        const foundItem = props.itens.find((item) => item.id === id);
+        props.alterado(foundItem);
+        console.log("Valor selecionado:", foundItem); // Exibe o valor selecionado
+    };
 
+    console.log("Valor atual:", props.valor); // Exibe o valor atual antes da atualização de estado
 
-    return(
+    return (
         <div className='lista-suspensa'>
             <label>{props.label}</label>
-            <select onChange={evento => props.alterado(evento.target.value)} required={props.obrigatorio} value={props.valor}>
-            <option value="" disabled hidden>Escolha uma opção</option>
-            {props.itens.map(item => {
-        return <option key={item}>{item}</option>
-    })}
+            <select onChange={handleSelect} required={props.obrigatorio} value={props.valor ? props.valor.id : ""}>
+                <option value="" disabled hidden>Escolha uma opção</option>
+                {props.itens.map(item => {
+                    return <option value={item.id} key={item.id}>{item.nome}</option>;
+                })}
             </select>
         </div>
-    )
-
+    );
 }
 
-export default ListaSuspensa
+export default ListaSuspensa;

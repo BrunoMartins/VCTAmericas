@@ -8,63 +8,61 @@ import { v4 as uuidv4 } from 'uuid';
 const Formulario = (props) => {
 
 
-    const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
-    const [imagem, setImagem] = useState('')
+ 
     const [time, setTime] = useState('')
+    const [jogador,setJogador]=useState('')
+    const [funcao,setFuncao]=useState('')
+    const [personagem,setPersonagem]=useState('')
     
-
-
-
     const salvar = (evento) => {
         evento.preventDefault()
         props.colaboradorCadastrado({
             id: uuidv4(),
             favorito:false,
-            nome,
-            cargo,
-            imagem,
-            time
+            time,
+            jogador,
+            funcao,
+            personagem
         })
         //limpando o formulário
-        setNome('')
-        setCargo('')
-        setImagem('')
         setTime('')
-
+        setJogador('')
+        setFuncao('')
+        setPersonagem('')
     }
 
     return (
         <section className="formulario-container">
             <form className="formulario" onSubmit={salvar}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
-                <Campo
-                    obrigatorio={true}
-                    label="Nome"
-                    placeholder="Digite seu nome"
-                    valor={nome}
-                    alterado={valor => setNome(valor)}
-                />
-                <Campo
-                    obrigatorio={true}
-                    label="Cargo"
-                    placeholder="Digite seu cargo"
-                    valor={cargo}
-                    alterado={valor => setCargo(valor)}
-                />
-                <Campo
-                    label="Imagem"
-                    placeholder="Digite o endereço da imagem"
-                    valor={imagem}
-                    alterado={valor => setImagem(valor)}
-                />
-
+                <h2>Selecione as opções para criar seu time</h2>
+               
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Time"
                     itens={props.times}
-                    valor={time}
+                    valor={time }
                     alterado={valor => setTime(valor)}
+                />
+                 <ListaSuspensa
+                    obrigatorio={true}
+                    label="Jogador"
+                    itens={props.jogadores}
+                    valor={jogador}
+                    alterado={valor => setJogador(valor)}
+                />
+                <ListaSuspensa
+                    obrigatorio={true}
+                    label="Função"
+                    itens={props.funcoes}
+                    valor={funcao}
+                    alterado={valor => setFuncao(valor)}
+                />
+                <ListaSuspensa
+                    obrigatorio={true}
+                    label="Personagem"
+                    itens={props.personagens.filter(personagem => personagem.funcao === funcao.nome)}
+                    valor={personagem}
+                    alterado={valor => setPersonagem(valor)}
                 />
                 <Botao>
                     Criar card

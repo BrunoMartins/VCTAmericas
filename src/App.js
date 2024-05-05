@@ -232,45 +232,107 @@ function App() {
       id: uuidv4(),
       nome: 'G2',
       corPrimaria: '#5c5959',
-      planoDeFundo: 'https://g2esports.com/cdn/shop/files/G2_Esports_Preview.jpg?v=1682085995'
+      logo: '/logo/G2_Esports_logo.png'
 
     },
     {
       id: uuidv4(),
       nome: 'KRÜ',
-      corPrimaria: '#e310df',
-      planoDeFundo: 'https://fraglider.com.br/wp-content/uploads/2022/05/kru_wall.png'
+      corPrimaria: '#e83092',
+      logo: '/logo/KRÜ_Esports_logo.png'
 
     },
     {
       id: uuidv4(),
       nome: 'LEVIATÁN',
       corPrimaria: '#4699dd',
-      planoDeFundo: 'https://files.bo3.gg/uploads/news/19007/title_image/960x480-e9c897cbdf903f3a6488a01b6cc147b1.webp'
+      logo: '/logo/Leviatan.png'
 
     },
+    
     {
       id: uuidv4(),
       nome: 'MIBR',
-      corPrimaria: '#cabc3d',
-      planoDeFundo: 'https://static.mibr.gg/uploads/2021/08/28132525/Wallpaper-Institucional-16x9-1-scaled.jpg'
+      corPrimaria: '#1e1f209d',
+      logo: '/logo/Made_In_Brazil_logo.png'
 
     },
     {
       id: uuidv4(),
       nome: 'NRG',
       corPrimaria: '#252525',
-      planoDeFundo: 'https://wallpapercave.com/wp/wp6479069.png'
+      logo: '/logo/nrg-esports-logo.svg'
 
     },
     {
       id: uuidv4(),
       nome: 'SENTINELS',
       corPrimaria: '#ce2020',
-      planoDeFundo: 'https://static-cdn.jtvnw.net/jtv_user_pictures/d5d02488-fb0c-4739-887f-3b4ad8c5b85f-channel_offline_image-1920x1080.png'
+      logo: '/logo/Sentinels_logo.svg'
 
     }
   ]);
+
+  const [personagens, setPersonagens] = useState([
+    {
+      id: uuidv4(),
+      nome: 'Brimstone',
+      funcao:'Controlador',
+      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt26fcf1b5752514ee/5eb7cdbfc1dc88298d5d3799/V_AGENTS_587x900_Brimstone.png'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Phoenix',
+      funcao:'Duelista',
+      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf0200e1821b5b39f/5eb7cdc144bf8261a04d87f9/V_AGENTS_587x900_Phx.png'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Sage',
+      funcao:'Sentinela',
+      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8a627ec10b57f4f2/5eb7cdc16509f3370a5a93b7/V_AGENTS_587x900_sage.png'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Sova',
+      funcao:'Iniciador',
+      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf11234f4775729b7/5ebf2c275e73766852c8d5d4/V_AGENTS_587x900_ALL_Sova_2.png'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Jett',
+      funcao:'Duelista',
+      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltceaa6cf20d328bd5/5eb7cdc1b1f2e27c950d2aaa/V_AGENTS_587x900_Jett.png'
+    }
+
+  ]);
+
+  const [funcoes, setFuncoes] = useState([
+    {
+      id: uuidv4(),
+      nome: 'Duelista',
+      icone:'https://static.wikia.nocookie.net/valorant/images/f/fd/DuelistClassSymbol.png/revision/latest?cb=20200408043920'
+
+    },
+    {
+      id: uuidv4(),
+      nome: 'Iniciador',
+      icone:'https://static.wikia.nocookie.net/valorant/images/7/77/InitiatorClassSymbol.png/revision/latest?cb=20200408043926'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Sentinela',
+      icone:'https://static.wikia.nocookie.net/valorant/images/4/43/SentinelClassSymbol.png/revision/latest?cb=20200408043934'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Controlador',
+      icone:'https://static.wikia.nocookie.net/valorant/images/0/04/ControllerClassSymbol.png/revision/latest?cb=20200408043911'
+    }
+
+  ]);
+
+
 
   const [colaboradores, setColaboradores] = useState([])
   const [nomeTime, setNomeTime] = useState('')
@@ -282,7 +344,7 @@ function App() {
     // Carregar colaboradores salvos na localStorage ao carregar a página
     const savedColaboradores = localStorage.getItem('colaboradores');
     if (savedColaboradores) {
-      setColaboradores(JSON.parse(savedColaboradores));
+      setColaboradores(JSON.parse( savedColaboradores));
     }
   }, []);
 
@@ -408,7 +470,10 @@ function App() {
         setNomeTime={setNomeTime}
         corTime={corTime}
         setCorTime={setCorTime}
-        times={times.map(time => time.nome)}
+        times={times}
+        jogadores={jogadores}
+        funcoes={funcoes}
+        personagens={personagens}
         colaboradorCadastrado={colaborador => colaboradorAdicionado(colaborador)} />
       <section className="times">
         <h1>Minha organização</h1>
@@ -436,7 +501,13 @@ function App() {
           logo={time.logo}
           deletar={deletarColaborador}
           favoritar={verificaFavorito}
-          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}//filtrando para que para cada time durante a interação apareça somente o colaborador que esteja nesse time
+          colaboradores={colaboradores.filter(colaborador => {
+
+            console.log('colaborador.time.nome',colaborador.time.nome)
+            console.log('time.nome',time.nome)
+
+            return colaborador.time.nome === time.nome
+          })}//filtrando para que para cada time durante a interação apareça somente o colaborador que esteja nesse time
         />)}
       </section>
       <Rodape />
