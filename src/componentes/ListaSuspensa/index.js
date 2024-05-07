@@ -6,10 +6,8 @@ const ListaSuspensa = (props) => {
         const id = event.target.value;
         const foundItem = props.itens.find((item) => item.id === id);
         props.alterado(foundItem);
-        console.log("Valor selecionado:", foundItem); // Exibe o valor selecionado
     };
 
-    console.log("Valor atual:", props.valor); // Exibe o valor atual antes da atualização de estado
 
     return (
         <div className='lista-suspensa'>

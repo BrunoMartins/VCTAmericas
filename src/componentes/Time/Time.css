@@ -7,12 +7,12 @@
 .time h3{
     font-size: 32px;
     display: inline-block;
+    margin: 0;
 }
 
 .time .colaboradores{
     display: flex;
     justify-content: space-around;
-    margin-top: 32px;
     flex-wrap: wrap;
 }
 
@@ -56,4 +56,5 @@
     align-items: center;
     justify-content: center;
     gap: 1em;
+    margin-bottom: .75em;
 }

@@ -24,8 +24,8 @@ const Time = (props) => {
             <div className='colaboradores'>
                 {props.colaboradores.map(colaborador => {
 
-                    console.log({colaborador})
-                    return <Colaborador corDeFundo={colaborador.time.corPrimaria} key={colaborador.id} nome={colaborador.jogador.nome} personagem={colaborador.personagem}  imagem={colaborador.jogador.imagem} id={colaborador.id} deletar={props.deletar} favorito={props.favorito} verificaFavorito={props.favoritar} modoEdicao={props.modoEdicao} />
+                    
+                    return <Colaborador corDeFundo={colaborador.time.corPrimaria} key={colaborador.id} nome={colaborador.jogador.nome} personagem={colaborador.personagem}  imagem={colaborador.jogador.imagem} id={colaborador.id} deletar={props.deletar} favorito={props.favorito} verificaFavorito={props.favoritar} modoEdicao={props.modoEdicao} nomePersonagem={colaborador.personagem.nome} funcaoPersonagem={colaborador.funcao.icone} fotoPersonagem={colaborador.personagem.imagem} />
                 })}
             </div>
             {props.modoEdicao && (

@@ -284,7 +284,7 @@ function App() {
       id: uuidv4(),
       nome: 'Phoenix',
       funcao:'Duelista',
-      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf0200e1821b5b39f/5eb7cdc144bf8261a04d87f9/V_AGENTS_587x900_Phx.png'
+      imagem: 'imagens/Personagens/PHOENIX.png'
     },
     {
       id: uuidv4(),
@@ -302,7 +302,7 @@ function App() {
       id: uuidv4(),
       nome: 'Jett',
       funcao:'Duelista',
-      imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltceaa6cf20d328bd5/5eb7cdc1b1f2e27c950d2aaa/V_AGENTS_587x900_Jett.png'
+      imagem: '/imagens/Personagens/JETT.png'
     }
 
   ]);
@@ -311,7 +311,7 @@ function App() {
     {
       id: uuidv4(),
       nome: 'Duelista',
-      icone:'https://static.wikia.nocookie.net/valorant/images/f/fd/DuelistClassSymbol.png/revision/latest?cb=20200408043920'
+      icone:'imagens/Duelista.png'
 
     },
     {
@@ -503,8 +503,7 @@ function App() {
           favoritar={verificaFavorito}
           colaboradores={colaboradores.filter(colaborador => {
 
-            console.log('colaborador.time.nome',colaborador.time.nome)
-            console.log('time.nome',time.nome)
+           
 
             return colaborador.time.nome === time.nome
           })}//filtrando para que para cada time durante a interação apareça somente o colaborador que esteja nesse time
