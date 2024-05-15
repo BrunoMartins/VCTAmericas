@@ -13,181 +13,205 @@ function App() {
   const [jogadores,setJogadores] = useState([
     {
       id:uuidv4(),
-      nome:'qck',
-      imagem:'https://cdn.ome.lt/BbtxLJCsI6XFD5javU_ZIswZff0=/1200x630/smart/extras/conteudos/valorant-loud-anuncia-qck.jpg'
+      nome:'QCK',
+      imagem:'imagens/Jogadores/QCK.jpg'
     },
     {
       id:uuidv4(),
-      nome:'tuyz',
-      imagem:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphQV-qNZQzpkm1iBvLFXaHCwJ7WBZC5Mr-X7Sr5-vbA&s'
+      nome:'TUYZ',
+      imagem:'imagens/Jogadores/TUYZ.jpg'
     },
     {
       id:uuidv4(),
-      nome:'cauanzin ',
-      imagem:'https://s2-ge.glbimg.com/MDOXnCMA7e-Dr_DIlEBpf4Z2RBI=/0x0:456x574/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/u/1/DHYrRvRMuDF0h2NCJXEQ/vct-americas-loud-cauanzin.png'
+      nome:'CAUANZIN',
+      imagem:'imagens/Jogadores/CAUANZIN.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Saadhak',
-      imagem:'https://assets.gamearena.gg/wp-content/uploads/2023/09/29214149/52977935434_388832a865_k.jpg'
+      nome:'SAADHAK',
+      imagem:'imagens/Jogadores/SAADHAK.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Less',
-      imagem:'https://liquipedia.net/commons/images/6/67/Less_at_the_Masters_Reykjav%C3%ADk_2022.jpg'
+      nome:'LESS',
+      imagem:'imagens/Jogadores/LESS.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Zellsis',
-      imagem:'https://assets.gamearena.gg/wp-content/uploads/2023/10/26173634/Snapinsta.app_301806712_1691854301215060_3130442795403565016_n_1080-e1698352668406.jpg'
+      nome:'ZELLSIS',
+      imagem:'imagens/Jogadores/ZELLSIS.jpg'
     },
 
     {
       id:uuidv4(),
-      nome:'johnqt',
-      imagem:'https://cloud.papercrowns.com/image/upload/c_fill,g_face,w_768,h_768,q_auto/v1/sentinels/member/johnqt.jpg?v=65af1970ad174'
+      nome:'JOHNQT',
+      imagem:'imagens/Jogadores/JOHNQT.jpg'
     },
     {
       id:uuidv4(),
-      nome:'TenZ',
-      imagem:'https://s2-techtudo.glbimg.com/xLYaRg6ngzz3alf9KoTxqfmDk28=/0x0:2047x1423/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/V/M/AhZfvAQO6BjPQAANgsAw/51209431721-486a0ff8e0-k.jpg'
+      nome:'TENZ',
+      imagem:'imagens/Jogadores/TENZ.webp'
     },
     {
       id:uuidv4(),
-      nome:'Sacy',
-      imagem:'https://assets.gamearena.gg/wp-content/uploads/2024/03/13134258/52708739914_b4e3ad8d80_k.jpg'
+      nome:'SACY',
+      imagem:'imagens/Jogadores/SACY.jpg'
     },
     {
       id:uuidv4(),
-      nome:'zekken',
-      imagem:'https://external-preview.redd.it/romero-sen-zekken-trying-to-slot-into-tysons-role-was-v0-artJxlZuVROA5uNRawiLHhzA3kGFF7XhtGuhwvBdBrs.jpg?auto=webp&s=795f005adb927b526fff626616a5df6e0cd093fa'
+      nome:'ZEKKEN',
+      imagem:'imagens/Jogadores/ZEKKEN.webp'
     },
     {
       id:uuidv4(),
       nome:'NZR',
-      imagem:'https://egw.news/cache/1/16/750/1666116761633-16x9.jpg'
+      imagem:'imagens/Jogadores/NZR.jpg'
     },
     {
       id:uuidv4(),
-      nome:'havoc',
-      imagem:'https://www.prosettings.gg/wp-content/uploads/2024/02/havoc-valorant-player-profile-picture-225x300.webp'
+      nome:'HAVOC',
+      imagem:'imagens/Jogadores/HAVOC.webp'
     },
     {
       id:uuidv4(),
-      nome:'kon4n',
-      imagem:'https://cdn.ome.lt/h5ra3hZfALH0uji3PfHMn-z0wHI=/1200x630/smart/extras/conteudos/valorant-kon4n-furia.jpg'
+      nome:'KON4N',
+      imagem:'imagens/Jogadores/KON4N.jpg'
     },
     {
       id:uuidv4(),
-      nome:'mwzera',
-      imagem:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQSTYr2NfWdQvy5kntud-3W5T2Y1Lh9WpqUaObOBtQw&s'
+      nome:'MWZERA',
+      imagem:'imagens/Jogadores/MWZERA.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Khalil',
-      imagem:'https://liquipedia.net/commons/images/b/b0/FURIA_Khalil_at_the_VALORANT_Champions_2022.jpg'
+      nome:'KHALIL',
+      imagem:'imagens/Jogadores/KHALIL.jpg'
     },
     {
       id:uuidv4(),
-      nome:'mazin',
-      imagem:'https://assets.gamearena.gg/wp-content/uploads/2023/10/19190927/F8g8r4cXsAAvSng-scaled-e1697753408339.jpeg'
+      nome:'MAZIN',
+      imagem:'imagens/Jogadores/MAZIN.jpeg'
     },
     {
       id:uuidv4(),
-      nome:'RgLM',
-      imagem:'https://cdn.ome.lt/siYrEnO8hy5tS2Chl2l60rM7290=/770x0/smart/uploads/conteudo/fotos/53048456136_6570c317b8_k.jpg'
+      nome:'RGLM',
+      imagem:'imagens/Jogadores/RGLM.jpg'
     },
     {
       id:uuidv4(),
-      nome:'frz',
-      imagem:'https://static.valorantzone.gg/news/2023/03/21180854/frz.jpg'
+      nome:'FRZ',
+      imagem:'imagens/Jogadores/FRZ.jpg'
     },
     {
       id:uuidv4(),
-      nome:'jzz',
-      imagem:'https://www.prosettings.gg/wp-content/uploads/2023/03/jzz-valorant-player-profile-picture.webp'
+      nome:'JZZ',
+      imagem:'imagens/Jogadores/JZZ.jpg'
     },
     {
       id:uuidv4(),
-      nome:'artzin',
-      imagem:'https://www.prosettings.gg/wp-content/uploads/2024/02/artzin-valorant-player-profile-picture.webp'
+      nome:'ARTZIN',
+      imagem:'imagens/Jogadores/ARTZIN.jpg'
     },
     {
       id:uuidv4(),
-      nome:'heat',
-      imagem:'https://cdn.ome.lt/auyx3tDuMrDlK7AYcWcdUBdczv8=/670x0/smart/uploads/conteudo/fotos/Heat_sorrindo.png'
+      nome:'HEAT',
+      imagem:'imagens/Jogadores/HEAT.png'
     },
     {
       id:uuidv4(),
-      nome:'Shyy',
-      imagem:'https://a.espncdn.com/photo/2023/1014/r1238428_2_1005x566_16-9.jpg'
+      nome:'SHYY',
+      imagem:'imagens/Jogadores/SHYY.jpg'
     },
     {
       id:uuidv4(),
-      nome:'keznit',
-      imagem:'https://assets.gamearena.gg/wp-content/uploads/2023/03/30005328/KEZNIT.jpg'
+      nome:'KEZNIT',
+      imagem:'imagens/Jogadores/KEZNIT.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Melser',
-      imagem:'https://www.prosettings.gg/wp-content/uploads/2022/11/Melser-valorant-player-profile-picture-new.webp'
+      nome:'MELSER',
+      imagem:'imagens/Jogadores/MELSER.webp'
     },
     {
       id:uuidv4(),
-      nome:'Klaus',
-      imagem:'https://www.prosettings.gg/wp-content/uploads/2022/11/Klaus-valorant-player-profile-picture-new.webp'
+      nome:'KLAUS',
+      imagem:'imagens/Jogadores/KLAUS.webp'
     },
     {
       id:uuidv4(),
-      nome:'aspas',
-      imagem:'https://assets.gamearena.gg/wp-content/uploads/2023/10/14092146/aspas.jpg'
+      nome:'ASPAS',
+      imagem:'imagens/Jogadores/ASPAS.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Mazino',
-      imagem:'https://staticg.sportskeeda.com/editor/2022/09/b2ce0-16637718762849-1920.jpg'
+      nome:'MAZINO',
+      imagem:'imagens/Jogadores/MAZINO.avif'
     },
     {
       id:uuidv4(),
-      nome:'kiNgg',
-      imagem:'https://pbs.twimg.com/media/Fl93BM9acAABsBm.jpg'
+      nome:'KINGG',
+      imagem:'imagens/Jogadores/KINGG.jpg'
     },
     {
       id:uuidv4(),
-      nome:'tex',
-      imagem:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSlnfW6n6DR3nEdzbiCXrrmZcPqZ2Dn_t2w8T0cpSXKQ&s'
+      nome:'TEX',
+      imagem:'imagens/Jogadores/TEX.jpg'
     },
     {
       id:uuidv4(),
       nome:'C0M',
-      imagem:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzSmMwqEJIxiaPsX2_0QKxEugIlM0YX5XCxhtZk7ruTw&s'
+      imagem:'imagens/Jogadores/C0M.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Marved',
-      imagem:'https://www.prosettings.gg/wp-content/uploads/2023/06/Marved-valorant-player-profile-picture-nrg.webp'
+      nome:'MARVED',
+      imagem:'imagens/Jogadores/MARVED.webp'
     },
     {
       id:uuidv4(),
-      nome:'Ethan',
-      imagem:'https://editors.dexerto.com/wp-content/uploads/2023/06/12/52965514274_5d4e4fef27_k_1600x900.jpg'
+      nome:'ETHAN',
+      imagem:'imagens/Jogadores/ETHAN.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Demon1',
-      imagem:'https://i.ytimg.com/vi/zA0_1NNgCR4/maxresdefault.jpg'
+      nome:'DEMON1',
+      imagem:'imagens/Jogadores/DEMON1.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Victor',
-      imagem:'https://pbs.twimg.com/profile_images/1663800147464327168/ezChBUw1_400x400.jpg'
+      nome:'VICTOR',
+      imagem:'imagens/Jogadores/VICTOR.jpg'
     },
     {
       id:uuidv4(),
-      nome:'Crashies',
-      imagem:'https://liquipedia.net/commons/images/thumb/1/11/NRG_crashies_at_VCT_LOCK_IN_Sao_Paolo.jpg/600px-NRG_crashies_at_VCT_LOCK_IN_Sao_Paolo.jpg'
+      nome:'CRASHIES',
+      imagem:'imagens/Jogadores/CRASHIES.jpg'
     },
-    
+    {
+      id:uuidv4(),
+      nome:'VALYN',
+      imagem:'imagens/Jogadores/VALYN.jpg'
+    },
+    {
+      id:uuidv4(),
+      nome:'ICY',
+      imagem:'imagens/Jogadores/ICY.jpg'
+    },
+    {
+      id:uuidv4(),
+      nome:'TRENT',
+      imagem:'imagens/Jogadores/TRENT.avif'
+    },
+    {
+      id:uuidv4(),
+      nome:'JONAHP',
+      imagem:'imagens/Jogadores/JONAHP.jpg'
+    },
+    {
+      id:uuidv4(),
+      nome:'LEAF',
+      imagem:'imagens/Jogadores/LEAF.jpg'
+    },
 
 
 
@@ -198,77 +222,87 @@ function App() {
       id: uuidv4(),
       nome: 'LOUD',
       corPrimaria: '#14c820',
-      logo: '/logo/LOUD_logo.svg.png'
+      logo: 'imagens/Logo/LOUD_logo.svg.png',
+      fundo:'imagens/Wallpaper/LOUD.jpg_large'
     },
     {
       id: uuidv4(),
       nome: '100 THIEVES',
-      corPrimaria: '#353333',
-      logo: '/logo/100_Thieves_logo.svg.png'
+      corPrimaria: '#5c5959',
+      logo: 'imagens/Logo/100_Thieves_logo.svg.png',
+      fundo:'imagens/Wallpaper/100THIEVES.webp'
 
     },
     {
       id: uuidv4(),
       nome: 'CLOUD9',
       corPrimaria: '#1a96e3',
-      logo: '/logo/Cloud9.png'
+      logo: 'imagens/Logo/Cloud9.png',
+      fundo:'imagens/Wallpaper/CLOUD9.jpg'
 
     },
     {
       id: uuidv4(),
       nome: 'EG',
-      corPrimaria: '#949191',
-      logo: '/logo/EvilGenuises.webp'
+      corPrimaria: '#706f6ffa',
+      logo: 'imagens/Logo/EvilGenuises.webp',
+      fundo:'imagens/Wallpaper/EG.jpg'
 
     },
     {
       id: uuidv4(),
       nome: 'FURIA',
-      corPrimaria: '#353333',
-      logo: '/logo/Furia_Esports_logo.png'
-
+      corPrimaria: '#5c5959',
+      logo: 'imagens/Logo/Furia_Esports_logo.png',
+      fundo:'imagens/Wallpaper/FURIA.jpg'
     },
     {
       id: uuidv4(),
       nome: 'G2',
       corPrimaria: '#5c5959',
-      logo: '/logo/G2_Esports_logo.png'
+      logo: 'imagens/Logo/G2_Esports_logo.png',
+      fundo:'imagens/Wallpaper/G2.jpg'
 
     },
     {
       id: uuidv4(),
       nome: 'KRÜ',
       corPrimaria: '#e83092',
-      logo: '/logo/KRÜ_Esports_logo.png'
+      logo: 'imagens/Logo/KRÜ_Esports_logo.png',
+      fundo:'imagens/Wallpaper/KRU.webp'
 
     },
     {
       id: uuidv4(),
       nome: 'LEVIATÁN',
       corPrimaria: '#4699dd',
-      logo: '/logo/Leviatan.png'
+      logo: 'imagens/Logo/Leviatan.png',
+      fundo:'imagens/Wallpaper/LEVIATAN.jpeg'
 
     },
     
     {
       id: uuidv4(),
       nome: 'MIBR',
-      corPrimaria: '#1e1f209d',
-      logo: '/logo/Made_In_Brazil_logo.png'
+      corPrimaria: '#001427fe',
+      logo: 'imagens/Logo/Made_In_Brazil_logo.png',
+      fundo:'imagens/Wallpaper/MIBR.jpg'
 
     },
     {
       id: uuidv4(),
       nome: 'NRG',
-      corPrimaria: '#252525',
-      logo: '/logo/nrg-esports-logo.svg'
+      corPrimaria: '#5c5959',
+      logo: 'imagens/Logo/nrg-esports-logo.svg',
+      fundo:'imagens/Wallpaper/NRG.jpg'
 
     },
     {
       id: uuidv4(),
       nome: 'SENTINELS',
       corPrimaria: '#ce2020',
-      logo: '/logo/Sentinels_logo.svg'
+      logo: 'imagens/Logo/Sentinels_logo.svg',
+      fundo:'imagens/Wallpaper/SENTINELS.webp'
 
     }
   ]);
@@ -276,31 +310,31 @@ function App() {
   const [personagens, setPersonagens] = useState([
     {
       id: uuidv4(),
-      nome: 'Brimstone',
+      nome: 'BRIMSTONE',
       funcao:'Controlador',
       imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt26fcf1b5752514ee/5eb7cdbfc1dc88298d5d3799/V_AGENTS_587x900_Brimstone.png'
     },
     {
       id: uuidv4(),
-      nome: 'Phoenix',
+      nome: 'PHOENIX',
       funcao:'Duelista',
       imagem: 'imagens/Personagens/PHOENIX.png'
     },
     {
       id: uuidv4(),
-      nome: 'Sage',
+      nome: 'SAGE',
       funcao:'Sentinela',
       imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8a627ec10b57f4f2/5eb7cdc16509f3370a5a93b7/V_AGENTS_587x900_sage.png'
     },
     {
       id: uuidv4(),
-      nome: 'Sova',
+      nome: 'SOVA',
       funcao:'Iniciador',
       imagem: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf11234f4775729b7/5ebf2c275e73766852c8d5d4/V_AGENTS_587x900_ALL_Sova_2.png'
     },
     {
       id: uuidv4(),
-      nome: 'Jett',
+      nome: 'JETT',
       funcao:'Duelista',
       imagem: '/imagens/Personagens/JETT.png'
     }
@@ -311,23 +345,23 @@ function App() {
     {
       id: uuidv4(),
       nome: 'Duelista',
-      icone:'imagens/Duelista.png'
+      icone:'imagens/Funcoes/Duelista.png'
 
     },
     {
       id: uuidv4(),
       nome: 'Iniciador',
-      icone:'https://static.wikia.nocookie.net/valorant/images/7/77/InitiatorClassSymbol.png/revision/latest?cb=20200408043926'
+      icone:'imagens/Funcoes/Iniciador.png'
     },
     {
       id: uuidv4(),
       nome: 'Sentinela',
-      icone:'https://static.wikia.nocookie.net/valorant/images/4/43/SentinelClassSymbol.png/revision/latest?cb=20200408043934'
+      icone:'imagens/Funcoes/Sentinela.png'
     },
     {
       id: uuidv4(),
       nome: 'Controlador',
-      icone:'https://static.wikia.nocookie.net/valorant/images/0/04/ControllerClassSymbol.png/revision/latest?cb=20200408043911'
+      icone:'imagens/Funcoes/Controlador.png'
     }
 
   ]);
@@ -476,7 +510,7 @@ function App() {
         personagens={personagens}
         colaboradorCadastrado={colaborador => colaboradorAdicionado(colaborador)} />
       <section className="times">
-        <h1>Minha organização</h1>
+        <h1>Meus times</h1>
         {modoEdicao ? (
           <button className='botao-salvar' onClick={salvarAlteracoes}> Salvar alterações
             <FaSave size={25}/>
@@ -499,6 +533,7 @@ function App() {
           nome={time.nome}
           corPrimaria={time.corPrimaria}
           logo={time.logo}
+          fundo={time.fundo}
           deletar={deletarColaborador}
           favoritar={verificaFavorito}
           colaboradores={colaboradores.filter(colaborador => {

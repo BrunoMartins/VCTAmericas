@@ -1,7 +1,5 @@
 import Colaborador from '../Colaborador'
 import './Time.css'
-import hexToRgba from 'hex-to-rgba';
-
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { MdDelete } from "react-icons/md";
 
@@ -10,11 +8,15 @@ const Time = (props) => {
     return (
         //operador ternário para veriricar caso o time esteja vazio, não renderiza, caso tenha algum colaborador, renderiza
         (props.colaboradores.length > 0) ? 
-        <section className='time' style={{ backgroundColor: hexToRgba(props.corPrimaria, '0.4')}}>
+        <section className='time' style={{ backgroundImage: `url('${props.fundo}')`,
+        backgroundSize: 'cover', // para cobrir todo o elemento
+        backgroundPosition: 'center', // posição central da imagem
+        backgroundRepeat: 'no-repeat' // não repetir a imagem
+      }}>
             {props.modoEdicao && (
             <div className='botoes'><input onChange={evento => props.mudarCor(evento.target.value, props.id)} value={props.corPrimaria} type='color' className='input-cor' />
-                <AiFillCloseCircle size={25} className='botao-cancelar' onClick={() => props.botaoCancelar(props.id)} />
-                <MdDelete size={25} onClick={() => props.botaoApagarTime(props.id)} />
+                <AiFillCloseCircle size={25} style={{color:props.corPrimaria}} className='botao-cancelar' onClick={() => props.botaoCancelar(props.id)} />
+                <MdDelete size={25} style={{color:props.corPrimaria}} onClick={() => props.botaoApagarTime(props.id)} />
             </div>
             )}
             <div className='cabecalho-time'>
@@ -25,7 +27,7 @@ const Time = (props) => {
                 {props.colaboradores.map(colaborador => {
 
                     
-                    return <Colaborador corDeFundo={colaborador.time.corPrimaria} key={colaborador.id} nome={colaborador.jogador.nome} personagem={colaborador.personagem}  imagem={colaborador.jogador.imagem} id={colaborador.id} deletar={props.deletar} favorito={props.favorito} verificaFavorito={props.favoritar} modoEdicao={props.modoEdicao} nomePersonagem={colaborador.personagem.nome} funcaoPersonagem={colaborador.funcao.icone} fotoPersonagem={colaborador.personagem.imagem} />
+                    return <Colaborador corDeFundo={colaborador.time.corPrimaria} key={colaborador.id} nome={colaborador.jogador.nome} personagem={colaborador.personagem}  imagem={colaborador.jogador.imagem} id={colaborador.id} deletar={props.deletar} favorito={props.favorito} verificaFavorito={props.favoritar} modoEdicao={props.modoEdicao} nomePersonagem={colaborador.personagem.nome} funcaoPersonagem={colaborador.funcao.icone} funcaoPersonagemDescricao={colaborador.funcao.nome} fotoPersonagem={colaborador.personagem.imagem} />
                 })}
             </div>
             {props.modoEdicao && (
